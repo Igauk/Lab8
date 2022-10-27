@@ -1,9 +1,9 @@
 package com.example.lab8;
 
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -37,8 +37,8 @@ public class CustomListTest {
     public void hasCityTest() {
         list = MockCityList();
         City cityInList = new City("CITY_IS_IN_THE_LIST_I_PROMISE", "AB");
-        list.add(cityInList);
-        list.hasCity(cityInList);
+        list.addCity(cityInList);
+        Assertions.assertTrue(list.hasCity(cityInList));
     }
 
 
