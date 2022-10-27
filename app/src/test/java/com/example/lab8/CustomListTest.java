@@ -33,5 +33,13 @@ public class CustomListTest {
         assertEquals(list.getCount(),listSize + 1);
     }
 
+    @Test
+    public void hasCityTest() {
+        list = MockCityList();
+        City cityInList = new City("CITY_IS_IN_THE_LIST_I_PROMISE", "AB");
+        list.add(cityInList);
+        list.hasCity(cityInList);
+    }
+
 
 }
